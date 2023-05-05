@@ -11,6 +11,7 @@ public class LoginPageObject {
 	 By password=By.xpath("//input[@id='password']"); 
 	 By login=By.xpath("//input[@id='Login']"); 
 	 By tryForFree=By.xpath("//a[@id='signup_link']");
+	 By error=By.xpath("//div[@id='error']");
 	  
 	
 
@@ -34,7 +35,10 @@ public class LoginPageObject {
 		 return driver.findElement(tryForFree);
 	      }
 
-	 
+	 public WebElement errorMsg() {  
+		 return driver.findElement(error);
+	      }
+ 
 	  
 	  
 	}

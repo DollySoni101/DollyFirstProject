@@ -13,8 +13,6 @@ public class VerifySignUpPage extends baseClass
 	@Test
 	public void signup() throws IOException, InterruptedException
 	{
-		initializeDriver() ;
-		  driver.get("https://login.salesforce.com/");
 		  
 		  LoginPageObject  LPO=new LoginPageObject(driver);  
 		  
@@ -26,7 +24,7 @@ public class VerifySignUpPage extends baseClass
 		  Thread.sleep(5000);
 		  //sp.enterfirstname().click();
 		 sp.enterfirstname().sendKeys("dolly");
-		  
+		 sp.enterlastname().sendKeys("soni");
 		  
 		   
 		

@@ -9,11 +9,13 @@ package Resources;
 	import org.openqa.selenium.chrome.ChromeDriver;
 	import org.openqa.selenium.edge.EdgeDriver;
 	import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 	public class baseClass {
 	 
 	 public WebDriver driver;
-
+	 public Properties prop; 
 	 public void initializeDriver() throws IOException {
 	  
 	  
@@ -22,7 +24,7 @@ package Resources;
 	  
 	  //Read the file-
 	  //Inbuilt java file
-	  Properties prop=new Properties();
+	  prop=new Properties();
 	  
 	  prop.load(fis);
 	  
@@ -44,13 +46,22 @@ package Resources;
 	   System.out.println("please choose valid browser to run your scripts");
 	  }
 	  
-	  
-	  
-	  
-	  
-	  
-	  
+}
+	 @BeforeMethod
+	public void launchBrowser() throws IOException
+	 {
+		initializeDriver() ; 
+		String url=prop.getProperty("url");
+		  driver.get(url);
+
 	 }
-	 
-	 
+	 @AfterMethod
+	public void quitBrowser() throws IOException
+	 {
+		  driver.quit();
+
+	 }
+
+	  
+	
 }

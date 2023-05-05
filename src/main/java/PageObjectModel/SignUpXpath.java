@@ -8,9 +8,9 @@ public class SignUpXpath {
 	
 	public WebDriver driver;
 	By firstname=By.xpath("//input[contains (@id, 'UserFirstName')]");
-	//By Lastname=By.xpath("//input[@id='UserLastName-JnVE']");
-	//By jobtitle=By.xpath("//input[@id='UserTitle-0BEH']");
-	//By nextbutton=By.xpath("//a[@data-page-cntrl='next']");
+		By Lastname=By.xpath("//input[contains (@id, 'UserLastName')]");
+	By jobtitle=By.xpath("//input[@id='UserTitle-0BEH']");
+	By nextbutton=By.xpath("//a[@data-page-cntrl='next']");
 	
 	public SignUpXpath(WebDriver driver2) {
 		this.driver=driver2;
@@ -19,7 +19,7 @@ public class SignUpXpath {
 	{
 		return driver.findElement(firstname);
 	}
-	/*public WebElement enterlastname()
+	public WebElement enterlastname()
 	{
 		return driver.findElement(Lastname);
 	}
@@ -31,7 +31,7 @@ public class SignUpXpath {
 	{
 		return driver.findElement(nextbutton);
 	}
-	*/
+	
 	
 	
 }
