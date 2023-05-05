@@ -20,7 +20,7 @@ import org.testng.annotations.BeforeMethod;
 	  
 	  
 	  //This will access the properties file
-		 FileInputStream   fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Rsources\\data.properties");  
+		 FileInputStream   fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");  
 	  //Read the file-
 	  //Inbuilt java file
 	  prop=new Properties();
